@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.kism.iotsw1502.cachmecachyou.choiceGame"
+    android:background="#262020">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="게임을 선택해주세요"
+        android:id="@+id/choice_game_palse"
+        android:textColor="#f7f7f7"
+        android:textSize="20dp"
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/imageView4"
+        android:src="@drawable/gametitle21"
+        android:layout_below="@+id/jombeepage_move"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/jombeepage_move"
+        android:background="@drawable/gametitle2"
+        android:layout_below="@+id/choice_game_palse"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/applogo"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/jombeepage_move"
+        android:layout_alignEnd="@+id/jombeepage_move" />
+
+</RelativeLayout>

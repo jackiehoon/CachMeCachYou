@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#262020"
+    android:paddingTop="15dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:background="#00FF15"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="255dp"
+            android:layout_height="55dp"
+            android:text="nickname"
+            android:id="@+id/nickname_db"
+            android:textColor="#f7f7f7"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:background="#262020" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center|right">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WAIT"
+            android:id="@+id/ready"
+            android:textColor="#898989"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+</LinearLayout>

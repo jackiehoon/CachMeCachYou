@@ -58,6 +58,7 @@ public class bluetoothPage extends AppCompatActivity {
     private ListView mDevicesListView;
 
 
+
     private final String TAG = bluetoothPage.class.getSimpleName();
     private Handler mHandler; // Our main handler that will receive callback notifications
 

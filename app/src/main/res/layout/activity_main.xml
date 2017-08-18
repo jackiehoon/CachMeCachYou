@@ -15,24 +15,15 @@
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:id="@+id/input_nick"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textColor="#f7f7f7"
-        android:hint="이름,닉네임"
+        android:hint="닉네임을 입력해 주세요"
         android:background="@null"
         android:textColorHint="#f7f7f7"
         android:gravity="center"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/clickbtn"
-        android:src="@drawable/bluetoothicon"
-        android:background="#262020"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="52dp" />
+        android:inputType="textCapWords" />
 
     <ImageView
         android:layout_width="fill_parent"
@@ -43,31 +34,32 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/result"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="블루투스를 연결해주세요."
         android:id="@+id/textView2"
-        android:layout_above="@+id/clickbtn"
-        android:layout_centerHorizontal="true"
         android:textColor="#f7f7f7"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:layout_below="@+id/clickbtn2"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="gaim"
-        android:id="@+id/game_btn"
-        android:layout_alignTop="@+id/result"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:id="@+id/start_btn"
+        android:background="@drawable/start_btn1"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/clickbtn2"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/clickbtn2"
+        android:layout_below="@+id/input_nick"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:background="@drawable/bluetoothicon" />
 
 </RelativeLayout>

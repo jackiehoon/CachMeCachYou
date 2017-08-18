@@ -14,10 +14,12 @@ import java.util.ArrayList;
  * Created by pc-15 on 2017-08-14.
  */
 public class GameAdaptor extends BaseAdapter {
+
     Context context;
     int customlist;
     LayoutInflater lif;
     String nickName;
+
 
     public GameAdaptor(Context applicationContext, int activity_custum_list, String nickName) {
         this.context = applicationContext;
@@ -47,8 +49,9 @@ public class GameAdaptor extends BaseAdapter {
             convertView = lif.inflate(customlist, parent, false);
         }
 
-
+        TextView ready = (TextView)convertView.findViewById(R.id.ready);
         TextView name = (TextView) convertView.findViewById(R.id.nickname_db);
+
 
         name.setText(nickName);
         return convertView;

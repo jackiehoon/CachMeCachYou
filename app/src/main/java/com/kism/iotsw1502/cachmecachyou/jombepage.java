@@ -13,6 +13,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class jombepage extends AppCompatActivity {
+    String id;
     GameAdaptor adaptor;
     String nickName;
     ListView listView;
@@ -27,7 +28,7 @@ public class jombepage extends AppCompatActivity {
         setContentView(R.layout.activity_jombepage);
 
         intent = getIntent();
-        nickName = intent.getStringExtra("nickname");
+        id = intent.getStringExtra("id");
         listView = (ListView)findViewById(R.id.nicknameList);
         startGame = (Button)findViewById(R.id.start_game);
 
@@ -37,6 +38,10 @@ public class jombepage extends AppCompatActivity {
         startGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
+
 
             }
         });

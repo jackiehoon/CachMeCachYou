@@ -17,6 +17,7 @@ public class choiceGame extends AppCompatActivity {
     Button jombe;
     Intent intent;
     String nickname;
+    String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,7 @@ public class choiceGame extends AppCompatActivity {
         setContentView(R.layout.activity_choice_game);
         intent = getIntent();
         nickname = intent.getStringExtra("nickname");
+        id = intent.getStringExtra("id");
         tv = (TextView)findViewById(R.id.choice_game_palse);
         jombe = (Button)findViewById(R.id.jombeepage_move);
 
@@ -36,7 +38,7 @@ public class choiceGame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(choiceGame.this, jombepage.class);
-                intent.putExtra("nickname", nickname);
+                intent.putExtra("id",id);
                 startActivity(intent);
             }
         });

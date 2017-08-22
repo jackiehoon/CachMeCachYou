@@ -43,8 +43,6 @@ import java.util.Set;
 import java.util.UUID;
 
 public class bluetoothPage extends AppCompatActivity {
-    private TextView macaddr;
-    private Button db_btn;
     // GUI Components
     private TextView mBluetoothStatus;
     private TextView mReadBuffer;
@@ -83,8 +81,7 @@ public class bluetoothPage extends AppCompatActivity {
         StrictMode.ThreadPolicy pol = new StrictMode.ThreadPolicy.Builder().permitNetwork().build();
         StrictMode.setThreadPolicy(pol);
         //------------여기까지 인터넷 접속위한 문장-------------------------
-        db_btn = (Button)findViewById(R.id.db);
-        macaddr = (TextView)findViewById(R.id.macaddr);
+
         mBluetoothStatus = (TextView)findViewById(R.id.bluetoothStatus);
         mReadBuffer = (TextView) findViewById(R.id.readBuffer);
         mScanBtn = (Button)findViewById(R.id.scan);
@@ -150,12 +147,6 @@ public class bluetoothPage extends AppCompatActivity {
                 }
             });
 
-            mListPairedDevicesBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v){
-                    listPairedDevices(v);
-                }
-            });
 
             mDiscoverBtn.setOnClickListener(new View.OnClickListener(){
                 @Override
@@ -170,25 +161,7 @@ public class bluetoothPage extends AppCompatActivity {
 
 
         }
-        db_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String html;
-                html = DownloadHtml("https://catch-jackiehoon.c9users.io/enter/[address]/[nickname]");
-                TextView result = (TextView) findViewById(R.id.returndb);
-                JSONObject json = null;
-                String is_start="";
-                try {
-                    json = new JSONObject(html);
-                    is_start=json.getString("is_start");
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
 
-
-                result.setText(is_start);
-            }
-        });
     }
 
     private void bluetoothOn(View view){
@@ -303,6 +276,7 @@ public class bluetoothPage extends AppCompatActivity {
 
                     try {
                         mBTSocket = createBluetoothSocket(device);
+                        //여기서 inputStream
                     } catch (IOException e) {
                         fail = true;
                         Toast.makeText(getBaseContext(), "Socket creation failed", Toast.LENGTH_SHORT).show();

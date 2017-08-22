@@ -42,9 +42,6 @@ public class MainActivity extends AppCompatActivity {
     Button start_btn;
 
     String macAddr;
-
-    TextView mac;
-    TextView ch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,16 +99,17 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 Intent intent = new Intent(MainActivity.this, choiceGame.class);
+                MyApplication app = (MyApplication) getApplication();
+                app.setId(device_id);
                 intent.putExtra("nickname", nickname);
-                intent.putExtra("id", device_id);
                 startActivity(intent);
-
+                Log.v("idd", device_id);
             }
         });
 
     }
 
-    String DownloadHtml(String addr) {
+    public static String DownloadHtml(String addr) {
         StringBuilder html = new StringBuilder();
         try {
             URL url = new URL(addr);
@@ -148,6 +146,8 @@ public class MainActivity extends AppCompatActivity {
                 macAddr = data.getStringExtra("macAddr");
 
                 if(check.equals("1")){
+                    click_btn.setWidth(10);
+                    click_btn.setHeight(10);
                     click_btn.setVisibility(View.INVISIBLE);
                     start_btn.setVisibility(View.VISIBLE);
                     textView2.setVisibility(View.INVISIBLE);

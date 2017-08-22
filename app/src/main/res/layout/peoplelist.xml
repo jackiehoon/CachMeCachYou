@@ -4,6 +4,7 @@
     android:padding="10dp"
     android:text="NAME"
     android:textColor="#ffd500"
-    android:textSize="30dp">
+    android:textSize="30dp"
+    android:id="@+id/peoNic">
 
 </TextView>

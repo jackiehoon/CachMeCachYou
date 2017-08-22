@@ -39,13 +39,13 @@
             <ListView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/listView"
+                android:id="@+id/peoList"
                 android:layout_weight="1" />
 
             <ListView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/listView2"
+                android:id="@+id/zomList"
                 android:layout_weight="1" />
         </LinearLayout>
 

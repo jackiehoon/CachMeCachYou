@@ -30,22 +30,22 @@
         android:divider="#262020"
         android:dividerHeight="5dp"
         android:layout_below="@+id/imageView"
-        android:layout_above="@+id/linearLayout" />
+        android:layout_above="@+id/bg" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="255dp"
         android:layout_height="75dp"
-        android:id="@+id/linearLayout"
+        android:id="@+id/bg"
         android:gravity="center"
-        android:background="#00ff15"
+        android:background="#f7f7f7"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
 
         <Button
             android:layout_width="250dp"
             android:layout_height="70dp"
-            android:text="START"
+            android:text="READY"
             android:id="@+id/start_game"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"

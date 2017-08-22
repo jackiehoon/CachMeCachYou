@@ -6,23 +6,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 /**
- * Created by pc-15 on 2017-08-14.
+ * Created by pc-15 on 2017-08-21.
  */
-public class GameAdaptor extends BaseAdapter {
+public class zomAdaptor extends BaseAdapter{
 
     Context context;
     int customlist;
     LayoutInflater lif;
-    ArrayList<memberVO>list;
+    ArrayList<memberVO> list;
 
 
-    public GameAdaptor(Context applicationContext, int activity_custum_list, ArrayList<memberVO>list) {
+    public zomAdaptor(Context applicationContext, int activity_custum_list, ArrayList<memberVO>list) {
 
         this.context = applicationContext;
         this.customlist = activity_custum_list;
@@ -51,22 +50,13 @@ public class GameAdaptor extends BaseAdapter {
             convertView = lif.inflate(customlist, parent, false);
         }
 
-        TextView wait = (TextView)convertView.findViewById(R.id.wait);
-        TextView ready = (TextView)convertView.findViewById(R.id.ready);
-        TextView name = (TextView) convertView.findViewById(R.id.nickname_db);
+
+        TextView name = (TextView) convertView.findViewById(R.id.zomNic);
 
         Log.v("listt", String.valueOf(list.size()));
         name.setText((list.get(position)).getNickname());
-        if(list.get(position).isCheck()==1){
-            wait.setVisibility(View.INVISIBLE);
-            ready.setVisibility(View.VISIBLE);
-        }else if(list.get(position).isCheck()==0){
-            wait.setVisibility(View.VISIBLE);
-            ready.setVisibility(View.INVISIBLE);
-        }
+
         return convertView;
     }
 
-
 }
-
